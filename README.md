@@ -10,7 +10,7 @@ Gitsearch allows a user to search a github user using their username. It returns
 
 * clone repository at [Github User search](https://github.com/Tevin-creator/Github-Search).
 * Install Angular cli.
-* Run nmp install.
+* Run nmp install
 * Install globals e.g. Typescript packages and typescript.
 * npm install typescript -g
 * apm install atom-typescript
@@ -30,4 +30,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## License
 
-MIT License. Copyright 2021 Kim.
+MIT License. Copyright 2021 Tevin Isaac.

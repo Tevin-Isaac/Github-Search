@@ -9,7 +9,7 @@ import {LandingService} from './services/landing.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServicesComponent } from './services/services.component';
+import { ServicesComponent } from './services/pofile.service';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LandingComponent } from './landing/landing.component';

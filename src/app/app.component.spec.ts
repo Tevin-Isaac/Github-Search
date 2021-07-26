@@ -16,7 +16,7 @@ describe('AppComponent', () => {
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Github-Search');
   });
 
-  it('should render title', () => {
+  it('should render title ina h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Github-Search app is running!');
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Github-Search app is running!');
   });
 });

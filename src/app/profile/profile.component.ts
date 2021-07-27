@@ -7,9 +7,9 @@ import { ProfileService } from '../services/profile.service'
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-profile: any[];
-repos: any[];
-username: string;
+profile: any;
+repos: any;
+username: any;
 
   constructor(private profileService:ProfileService) {
 

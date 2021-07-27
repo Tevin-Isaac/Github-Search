@@ -1,1 +1,52 @@
-<p>landing works!</p>
+<div class="profile" *ngIf="info">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{info.name}} <small>({{info.login}})</small>
+        <span *ngIf = "info.company">,Works at{{info.company}}</span>
+        {{info.location}}
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="{{info.avatar_url}}" class="img-circle img-responsive"
+            alt="Profile image"/>
+          </div>
+          <div class="col-sm-5">
+            <ul class="list-group">
+              <li class="list-group-item" *ngIf="info.bio">{{info.bio}}</li>
+              <li class="list-group-item" *ngIf="info.hireable">Available for hire</li>
+              <li class="list-group-item" *ngIf="info.blog">
+                <a href="{{info.blog}}">{{info.blog}}</a></li>
+              <li class="list-group-item" *ngIf="info.email">
+                <a href="{{info.email}}" target="_blank">{{info.email}}</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <div>
+              <p>
+                <span class="label label-default">{{info.followers}} Followers</span>
+                <span class="label label-success">{{info.following}} Following</span>
+                <span class="label label-primary">{{info.public_gists}} Public gists</span>
+                <span class="label label-info">{{info.public_repos}} public_repos</span>
+              </p>
+              <p><a href="{{info.html_url}}" target="_blank" class="btn btn-success btn-small">View profile on Github</a></p>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Repositories</h3>
+                </div>
+                <div class="panel-body" *ngFor="let repo of repos">
+                  <p class="clearfix">
+                    {{repo.name}}
+                    <a href="{{repo.html_url}}" class="btn btn-sm btn-warning"
+                    target="_blank">View this project on github</a>
+                  </p>
+                  <p>{{repo.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

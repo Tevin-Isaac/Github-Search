@@ -7,8 +7,8 @@ import {LandingService} from "../services/landing.service";
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
-info:any[];
-repos:any[];
+info:any;
+repos:any;
   constructor(private landingService: LandingService) {
     this.landingService.getUserInfo().subscribe(info => {
       console.log(info);

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers} from '@angular/http';
+import {Http} from '@angular/common/http'
+
 import 'rxjs/add/operator/map';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class LandingService {
   private username: string;
   private clientid = 'c4c1a435f2395d421bcd';
@@ -10,7 +11,7 @@ export class LandingService {
 
   constructor(private http:Http) {
     console.log("service is now ready!");
-    this.username = "VickyMutai";
+    this.username = "Tevin-creator";
 
    }
    getUserInfo(){

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ProfileService {
 
   private username: string;
@@ -11,8 +12,10 @@ export class ProfileService {
 
   constructor(private http:Http) {
     console.log("service is now ready");
-    this.username = "VickyMutai";
+    this.username = "Tevin-creator";
   }
+
+  
 
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username

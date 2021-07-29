@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Http} from '@angular/http';
+import {  HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/Rx';
+
 
 @Injectable({ providedIn: 'root' })
 export class ProfileService {
@@ -10,7 +12,7 @@ export class ProfileService {
   private clientid = 'e6712bc8beabcaf2c159';
   private clientsecret = 'ab4c657cb7fd1001329a74da8d97f9b7ca913295';
 
-  constructor(private http:Http) {
+  constructor(private http:HttpClient) {
     console.log("service is now ready");
     this.username = "Tevin-creator";
   }
@@ -20,13 +22,13 @@ export class ProfileService {
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username
      + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
-     .map(res => res.json());
+     
   }
 
   getRepos(){
     return this.http.get("https://api.github.com/users/" + this.username
      + "/repos?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
-     .map(res => res.json());
+   
   }
 
   updateProfile(username:string){

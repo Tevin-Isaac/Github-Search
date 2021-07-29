@@ -3,6 +3,7 @@
 This project was created using [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
 # Description
+![Screenshot from 2021-07-29 18-09-17](https://user-images.githubusercontent.com/81568615/127518472-73c48bab-47d6-4904-97ac-32963950c479.png)
 
 Gitsearch allows a user to search a github user using their username. It returns the user information including, username, company, number of repositories, number of followers on github and the number of people they are following on github.
 
